@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1" />
+<title>Gym Tracker</title>
+<meta name="theme-color" content="#0b0d10" media="(prefers-color-scheme: dark)" />
+<meta name="theme-color" content="#f4f5f7" media="(prefers-color-scheme: light)" />
+<link rel="manifest" href="manifest.json" />
+<link rel="apple-touch-icon" href="icons/icon-192.png" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="Gym Tracker" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<div id="app">
+
+  <!-- TODAY -->
+  <section class="screen" id="screen-today"></section>
+
+  <!-- ACTIVE WORKOUT -->
+  <section class="screen" id="screen-workout"></section>
+
+  <!-- CHECK-IN -->
+  <section class="screen" id="screen-checkin"></section>
+
+  <!-- DASHBOARD -->
+  <section class="screen" id="screen-dashboard"></section>
+
+  <!-- PLAN -->
+  <section class="screen" id="screen-plan"></section>
+
+  <nav class="tabbar" id="tabbar">
+    <button class="tab-btn" data-tab="today">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>
+      <span>Today</span>
+    </button>
+    <button class="tab-btn" data-tab="workout">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6.5 6.5l11 11M4 9l3-3 3 3-3 3-3-3zM14 19l3-3 3 3-3 3-3-3zM2 12l2-2M20 12l2 2M9 4l2 2M13 18l2 2"/></svg>
+      <span>Workout</span>
+    </button>
+    <button class="tab-btn" data-tab="checkin">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+      <span>Check-in</span>
+    </button>
+    <button class="tab-btn" data-tab="dashboard">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 15l4-6 3 4 5-8"/></svg>
+      <span>Dashboard</span>
+    </button>
+    <button class="tab-btn" data-tab="plan">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+      <span>Plan</span>
+    </button>
+  </nav>
+
+  <!-- Rest timer: collapsed pill -->
+  <div class="timer-pill hidden" id="timer-pill">
+    <span class="pill-dot"></span>
+    <span id="timer-pill-time">0:00</span>
+    <span id="timer-pill-label" style="color:var(--text-dim);font-weight:600;font-size:13px;"></span>
+  </div>
+
+  <!-- Rest timer: full overlay -->
+  <div class="timer-overlay hidden" id="timer-overlay">
+    <button class="icon-btn timer-collapse-btn" id="timer-collapse-btn" aria-label="Collapse timer">▾</button>
+    <div class="rest-label" id="timer-exercise-label">Rest</div>
+    <div class="timer-ring-wrap">
+      <svg viewBox="0 0 120 120">
+        <circle class="timer-ring-bg" cx="60" cy="60" r="52"></circle>
+        <circle class="timer-ring-fg" id="timer-ring-fg" cx="60" cy="60" r="52" stroke-dasharray="326.7" stroke-dashoffset="0"></circle>
+      </svg>
+      <div class="timer-digits" id="timer-digits">0:00</div>
+    </div>
+    <div class="timer-exercise-next" id="timer-next-label"></div>
+    <div class="timer-controls">
+      <button class="btn" id="timer-minus15">−15s</button>
+      <button class="btn" id="timer-pause">Pause</button>
+      <button class="btn" id="timer-plus15">+15s</button>
+    </div>
+    <button class="btn btn-ghost timer-skip-btn" id="timer-skip">Skip rest</button>
+  </div>
+
+  <!-- Undo toast -->
+  <div class="toast" id="toast">
+    <span id="toast-msg"></span>
+    <button class="undo-btn" id="toast-undo">Undo</button>
+  </div>
+
+  <!-- Generic bottom sheet -->
+  <div class="sheet-backdrop hidden" id="sheet-backdrop">
+    <div class="sheet" id="sheet-content"></div>
+  </div>
+
+</div>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
