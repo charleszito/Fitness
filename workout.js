@@ -1,12 +1,12 @@
-import { el, fmtTime, showToast, openSheet, closeSheet, haptic } from '../ui.js';
-import { metaGet, metaSet } from '../db.js';
+import { el, fmtTime, showToast, openSheet, closeSheet, haptic } from './ui.js';
+import { metaGet, metaSet } from './db.js';
 import {
   getExercisesForSession, getExerciseRecord, getLastPerformance, logSet, removeSet,
   addExtraSet, setRpe, setPain, undoLastSet, getExerciseNote, setExerciseNote,
   getExerciseSettings, setExerciseSettings,
-} from '../workout-data.js';
-import { startTimer, primeAudio } from '../timer.js';
-import { rpeGuidance, dateToWeek } from '../data/program.js';
+} from './workout-data.js';
+import { startTimer, primeAudio } from './timer.js';
+import { rpeGuidance, dateToWeek } from './program.js';
 
 let ctx = null; // { date, session, week, exercises, order, currentIndex, startedAt, viewMode }
 let durationInterval = null;

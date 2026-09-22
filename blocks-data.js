@@ -1,5 +1,5 @@
 import { dbGetAll, dbPut } from './db.js';
-import { setBlocks, getBlocks, PLAN_START_DATE, PLAN_WEEKS, addDays } from './data/program.js';
+import { setBlocks, getBlocks, PLAN_START_DATE, PLAN_WEEKS, addDays } from './program.js';
 
 export async function loadBlocksIntoCache() {
   const rows = await dbGetAll('blocks');

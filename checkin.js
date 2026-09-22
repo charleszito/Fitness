@@ -1,10 +1,10 @@
-import { el } from '../ui.js';
+import { el } from './ui.js';
 import {
   getDailyLog, setDailyLog, getMealLog, setMealEntry, acceptPlannedMeal,
   dailyProteinTotal, dailyKcalTotal, getProteinTarget,
-} from '../daily-data.js';
-import { sessionForDate, dateToWeek, LIFTING_SESSIONS, MEAL_PLAN, STEPS_TARGETS } from '../data/program.js';
-import { openSheet, closeSheet } from '../ui.js';
+} from './daily-data.js';
+import { sessionForDate, dateToWeek, LIFTING_SESSIONS, MEAL_PLAN, STEPS_TARGETS } from './program.js';
+import { openSheet, closeSheet } from './ui.js';
 
 export async function mountCheckin(date) {
   const root = document.getElementById('screen-checkin');

@@ -1,10 +1,10 @@
-import { el, openSheet, closeSheet } from '../ui.js';
-import { metaGet, metaSet } from '../db.js';
-import { SESSIONS, parseTarget, getBlocks } from '../data/program.js';
-import { addNextBlock } from '../blocks-data.js';
-import { setTheme } from '../theme.js';
-import { setWakeLockEnabled } from '../timer.js';
-import { exportToXlsx, exportToJson, importFromJson } from '../export.js';
+import { el, openSheet, closeSheet } from './ui.js';
+import { metaGet, metaSet } from './db.js';
+import { SESSIONS, parseTarget, getBlocks } from './program.js';
+import { addNextBlock } from './blocks-data.js';
+import { setTheme } from './theme.js';
+import { setWakeLockEnabled } from './timer.js';
+import { exportToXlsx, exportToJson, importFromJson } from './export.js';
 
 export async function mountPlan() {
   const root = document.getElementById('screen-plan');

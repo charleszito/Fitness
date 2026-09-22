@@ -1,8 +1,8 @@
 // First-run import: seeds IndexedDB with the weeks 1-2 data pulled from the
 // source workbook, plus default settings.
 import { metaGet, metaSet, dbPut, dbGet } from './db.js';
-import { SEED_LOGGED } from './data/seed-logged.js';
-import { SESSIONS, DEFAULT_PROTEIN_TARGET_G } from './data/program.js';
+import { SEED_LOGGED } from './seed-logged.js';
+import { SESSIONS, DEFAULT_PROTEIN_TARGET_G } from './program.js';
 
 function slug(s) {
   return s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');

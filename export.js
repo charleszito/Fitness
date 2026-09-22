@@ -1,6 +1,6 @@
-import { buildXlsxBlob } from './vendor/minixlsx.js';
+import { buildXlsxBlob } from './minixlsx.js';
 import { dbGetAll, dbClearAll, metaGet, dbPutMany } from './db.js';
-import { MILESTONES, MEAL_PLAN } from './data/program.js';
+import { MILESTONES, MEAL_PLAN } from './program.js';
 import { weeklySummary, proteinTarget as getProteinTarget } from './dashboard-data.js';
 
 function downloadBlob(blob, filename) {

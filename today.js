@@ -1,9 +1,9 @@
-import { el, openSheet, closeSheet } from '../ui.js';
+import { el, openSheet, closeSheet } from './ui.js';
 import {
   sessionForDate, dateToWeek, warmupListFor, stretchListFor, MILESTONES, STEPS_TARGETS, LIFTING_SESSIONS,
-} from '../data/program.js';
-import { getExercisesForSession, getExerciseRecord } from '../workout-data.js';
-import { getWarmupStatus, setWarmupItem, getStretchStatusForSession, setStretchItem } from '../daily-data.js';
+} from './program.js';
+import { getExercisesForSession, getExerciseRecord } from './workout-data.js';
+import { getWarmupStatus, setWarmupItem, getStretchStatusForSession, setStretchItem } from './daily-data.js';
 
 export async function mountToday(date) {
   const root = document.getElementById('screen-today');

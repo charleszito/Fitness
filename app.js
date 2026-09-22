@@ -1,11 +1,11 @@
 import { runFirstRunImportIfNeeded } from './import.js';
 import { metaGet, metaSet } from './db.js';
-import { todayStr, sessionForDate } from './data/program.js';
-import { mountToday } from './screens/today.js';
-import { mountWorkout } from './screens/workout.js';
-import { mountCheckin } from './screens/checkin.js';
-import { mountDashboard } from './screens/dashboard.js';
-import { mountPlan } from './screens/plan.js';
+import { todayStr, sessionForDate } from './program.js';
+import { mountToday } from './today.js';
+import { mountWorkout } from './workout.js';
+import { mountCheckin } from './checkin.js';
+import { mountDashboard } from './dashboard.js';
+import { mountPlan } from './plan.js';
 import { initTimerUI, setTimerCollapsedForTab } from './timer-ui.js';
 import { setWakeLockEnabled } from './timer.js';
 import { loadBlocksIntoCache } from './blocks-data.js';

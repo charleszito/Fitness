@@ -5,7 +5,7 @@ import { dbGetAll, dbGetAllByIndex, metaGet } from './db.js';
 import {
   PLAN_START_DATE, PLAN_WEEKS, STEPS_TARGETS, MILESTONES, LIFTING_SESSIONS,
   SESSIONS, WEEKLY_CYCLE, addDays, dateToWeek, sessionForDate, DEFAULT_PROTEIN_TARGET_G,
-} from './data/program.js';
+} from './program.js';
 
 export async function getAllDailyLogs() {
   return dbGetAll('dailyLogs');

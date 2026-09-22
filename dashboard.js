@@ -1,11 +1,11 @@
-import { el } from '../ui.js';
-import { lineChartSVG, barChartSVG, statRow, progressBar } from '../chart.js';
+import { el } from './ui.js';
+import { lineChartSVG, barChartSVG, statRow, progressBar } from './chart.js';
 import {
   getAllDailyLogs, getAllWorkoutLogs, rollingAverageWeight, stallAlert, liftProgression,
   weeklyVolume, painMap, weeklySummary, milestonesWithStatus, adherenceSummary, proteinTarget,
   epley1RM,
-} from '../dashboard-data.js';
-import { SESSIONS, MILESTONES, dateToWeek } from '../data/program.js';
+} from './dashboard-data.js';
+import { SESSIONS, MILESTONES, dateToWeek } from './program.js';
 
 const MAIN_LIFTS = Object.values(SESSIONS).flat().filter((e) => e.category === 'main');
 let selectedLiftId = MAIN_LIFTS[0]?.id;

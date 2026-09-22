@@ -1,7 +1,7 @@
 // Core read/write logic for workout logging: last-time lookups, set logging,
 // undo, per-exercise settings (unit/increment/rest) and carry-forward notes.
 import { dbGet, dbGetAllByIndex, dbPut, metaGet } from './db.js';
-import { SESSIONS, prescribedSets } from './data/program.js';
+import { SESSIONS, prescribedSets } from './program.js';
 
 const recordKey = (date, exerciseId) => `${date}__${exerciseId}`;
 

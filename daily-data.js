@@ -1,6 +1,6 @@
 // Daily check-in, meal log, warm-up and stretch log read/write helpers.
 import { dbGet, dbPut, dbGetAllByIndex, metaGet } from './db.js';
-import { PLANNED_MEALS_BY_WEEKDAY, MEAL_PLAN, warmupListFor, stretchListFor, DEFAULT_PROTEIN_TARGET_G } from './data/program.js';
+import { PLANNED_MEALS_BY_WEEKDAY, MEAL_PLAN, warmupListFor, stretchListFor, DEFAULT_PROTEIN_TARGET_G } from './program.js';
 
 function slug(s) {
   return s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
